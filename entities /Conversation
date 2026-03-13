@@ -1,0 +1,41 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Email addresses of participants"
+    },
+    "job_id": {
+      "type": "string",
+      "description": "Related job ID if any"
+    },
+    "job_title": {
+      "type": "string",
+      "description": "Cached job title"
+    },
+    "last_message": {
+      "type": "string",
+      "description": "Preview of last message"
+    },
+    "last_message_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "job_discussion",
+        "interview_invitation",
+        "general"
+      ],
+      "default": "job_discussion"
+    }
+  },
+  "required": [
+    "participants"
+  ]
+}
