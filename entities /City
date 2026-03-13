@@ -1,0 +1,40 @@
+{
+  "name": "City",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "City name"
+    },
+    "country_code": {
+      "type": "string",
+      "description": "ISO country code"
+    },
+    "region": {
+      "type": "string",
+      "description": "State/region/province"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude coordinate"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude coordinate"
+    },
+    "population": {
+      "type": "number",
+      "description": "City population"
+    },
+    "geoname_id": {
+      "type": "string",
+      "description": "GeoNames ID"
+    }
+  },
+  "required": [
+    "name",
+    "country_code",
+    "latitude",
+    "longitude"
+  ]
+}
