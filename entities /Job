@@ -1,0 +1,139 @@
+{
+  "name": "Job",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Job title"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "company_id": {
+      "type": "string",
+      "description": "Company ID reference"
+    },
+    "description": {
+      "type": "string",
+      "description": "Job description"
+    },
+    "requirements": {
+      "type": "string",
+      "description": "Job requirements"
+    },
+    "location_name": {
+      "type": "string",
+      "description": "City/location name"
+    },
+    "city": {
+      "type": "string",
+      "description": "City name"
+    },
+    "country_code": {
+      "type": "string",
+      "description": "Country code"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Location latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Location longitude"
+    },
+    "job_type": {
+      "type": "string",
+      "enum": [
+        "full_time",
+        "part_time",
+        "contract",
+        "freelance",
+        "internship"
+      ],
+      "description": "Type of employment"
+    },
+    "is_remote": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether job is remote"
+    },
+    "salary_min": {
+      "type": "number",
+      "description": "Minimum salary"
+    },
+    "salary_max": {
+      "type": "number",
+      "description": "Maximum salary"
+    },
+    "salary_currency": {
+      "type": "string",
+      "default": "USD",
+      "description": "Salary currency"
+    },
+    "experience_level": {
+      "type": "string",
+      "enum": [
+        "entry",
+        "mid",
+        "senior",
+        "executive"
+      ],
+      "description": "Required experience level"
+    },
+    "category": {
+      "type": "string",
+      "description": "Job category"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Required skills"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "closed",
+        "draft"
+      ],
+      "default": "active"
+    },
+    "posted_by": {
+      "type": "string",
+      "description": "Email of the poster"
+    },
+    "company_logo_url": {
+      "type": "string",
+      "description": "Company logo URL"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ku",
+        "ar"
+      ],
+      "default": "en",
+      "description": "Job listing language"
+    },
+    "views_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of views"
+    },
+    "applications_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of applications"
+    }
+  },
+  "required": [
+    "title",
+    "company",
+    "description",
+    "location_name"
+  ]
+}
