@@ -1,0 +1,50 @@
+{
+  "name": "Application",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "description": "ID of the job applied to"
+    },
+    "applicant_email": {
+      "type": "string",
+      "description": "Email of the applicant"
+    },
+    "employer_email": {
+      "type": "string",
+      "description": "Email of the employer"
+    },
+    "message": {
+      "type": "string",
+      "description": "Application cover message"
+    },
+    "resume_url": {
+      "type": "string",
+      "description": "URL to uploaded resume"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "sent",
+        "viewed",
+        "interview",
+        "rejected",
+        "offer",
+        "accepted"
+      ],
+      "default": "sent"
+    },
+    "job_title": {
+      "type": "string",
+      "description": "Cached job title"
+    },
+    "company": {
+      "type": "string",
+      "description": "Cached company name"
+    }
+  },
+  "required": [
+    "job_id",
+    "applicant_email"
+  ]
+}
