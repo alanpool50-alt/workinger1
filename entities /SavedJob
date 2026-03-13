@@ -1,0 +1,18 @@
+{
+  "name": "SavedJob",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "description": "ID of the saved job"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user who saved it"
+    }
+  },
+  "required": [
+    "job_id",
+    "user_email"
+  ]
+}
