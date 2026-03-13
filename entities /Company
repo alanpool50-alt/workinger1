@@ -1,0 +1,54 @@
+{
+  "name": "Company",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Company description"
+    },
+    "industry": {
+      "type": "string",
+      "description": "Industry sector"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Company logo URL"
+    },
+    "location": {
+      "type": "string",
+      "description": "Company location"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string",
+      "description": "Company website"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "1-10",
+        "11-50",
+        "51-200",
+        "201-500",
+        "501-1000",
+        "1000+"
+      ]
+    },
+    "owner_email": {
+      "type": "string",
+      "description": "Company owner email"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
