@@ -1,0 +1,22 @@
+{
+  "name": "Country",
+  "type": "object",
+  "properties": {
+    "country_code": {
+      "type": "string",
+      "description": "ISO 2-letter country code"
+    },
+    "country_name": {
+      "type": "string",
+      "description": "Country name in English"
+    },
+    "region": {
+      "type": "string",
+      "description": "Geographic region (Europe, Asia, etc.)"
+    }
+  },
+  "required": [
+    "country_code",
+    "country_name"
+  ]
+}
