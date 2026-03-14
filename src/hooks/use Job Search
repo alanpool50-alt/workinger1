@@ -1,0 +1,28 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { base44 } from '@/api/base44Client';
+
+export function useRecentJobs(user) {
+  const queryClient = useQueryClient();
+
+  const trackView = useMutation({
+    mutationFn: async (job) => {
+      if (!user?.email || !job?.id) return;
+      
+      await base44.entities.ViewedJob.create({
+        user_email: user.email,
+        job_id: String(job.id),
+        job_title: job.title,
+        company: job.company,
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['recentJobs'] });
+    },
+  });
+
+  return {
+    trackView: (job) => trackView.mutate(job),
+  };
+}
+
+export default useRecentJobs;
