@@ -1,0 +1,23 @@
+/* RTL support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Hide scrollbar for section tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area padding for bottom nav */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
