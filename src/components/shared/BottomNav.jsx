@@ -17,9 +17,15 @@ export default function BottomNav() {
 
   const isEmployer = user?.role === 'employer';
 
+  const isAdmin = user?.role === 'admin';
+  
+  if (isAdmin) {
+    return null; // Admins use different navigation
+  }
+
   const navItems = isEmployer ? [
-    { path: '/Explore', icon: Search, label: t('explore_jobs') },
-    { path: '/ManageJobs', icon: Briefcase, label: 'My Jobs' },
+    { path: '/EmployerDashboard', icon: Briefcase, label: 'Dashboard' },
+    { path: '/ManageJobs', icon: PlusSquare, label: 'My Jobs' },
     { path: '/Applicants', icon: FileText, label: 'Applicants' },
     { path: '/Messages', icon: MessageCircle, label: t('messages') },
     { path: '/Profile', icon: User, label: t('profile') },
