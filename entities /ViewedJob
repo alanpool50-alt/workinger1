@@ -1,0 +1,26 @@
+{
+  "name": "ViewedJob",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User who viewed the job"
+    },
+    "job_id": {
+      "type": "string",
+      "description": "Job that was viewed"
+    },
+    "job_title": {
+      "type": "string",
+      "description": "Cached job title for quick display"
+    },
+    "company": {
+      "type": "string",
+      "description": "Cached company name"
+    }
+  },
+  "required": [
+    "user_email",
+    "job_id"
+  ]
+}
