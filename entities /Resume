@@ -1,0 +1,38 @@
+{
+  "name": "Resume",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User email reference"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL to the uploaded resume file"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Original filename"
+    },
+    "parsed_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Auto-extracted skills from resume"
+    },
+    "parsed_experience": {
+      "type": "string",
+      "description": "Extracted experience summary"
+    },
+    "is_primary": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this is the user's primary resume"
+    }
+  },
+  "required": [
+    "user_email",
+    "file_url"
+  ]
+}
