@@ -72,7 +72,6 @@ export default function Explore() {
   const filteredJobs = useMemo(() => {
     let result = jobsWithDistance;
 
-    // Search query
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       result = result.filter(j =>
@@ -82,7 +81,6 @@ export default function Explore() {
       );
     }
 
-    // Filters
     if (filters.job_type) result = result.filter(j => j.job_type === filters.job_type);
     if (filters.is_remote) result = result.filter(j => j.is_remote);
     if (filters.experience_level) result = result.filter(j => j.experience_level === filters.experience_level);
