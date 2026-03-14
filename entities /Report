@@ -1,0 +1,52 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "job",
+        "company",
+        "message",
+        "user"
+      ],
+      "description": "Type of content being reported"
+    },
+    "target_id": {
+      "type": "string",
+      "description": "ID of the reported content"
+    },
+    "reporter_email": {
+      "type": "string",
+      "description": "Email of person reporting"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Reason for report"
+    },
+    "details": {
+      "type": "string",
+      "description": "Additional details"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewed",
+        "resolved",
+        "dismissed"
+      ],
+      "default": "pending"
+    },
+    "admin_notes": {
+      "type": "string",
+      "description": "Admin review notes"
+    }
+  },
+  "required": [
+    "type",
+    "target_id",
+    "reporter_email",
+    "reason"
+  ]
+}
