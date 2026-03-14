@@ -37,13 +37,14 @@ export default function Admin() {
   ];
 
   const entities = [
-    { name: 'Users', icon: Users, count: users.length, path: '/admin/users' },
-    { name: 'Jobs', icon: Briefcase, count: jobs.length, path: '/admin/jobs' },
-    { name: 'Companies', icon: Building2, count: companies.length, path: '/admin/companies' },
-    { name: 'Applications', icon: FileText, count: applications.length, path: '/admin/applications' },
-    { name: 'Messages', icon: MessageSquare, path: '/admin/messages' },
-    { name: 'Cities', icon: MapPin, path: '/admin/cities' },
-    { name: 'Notifications', icon: Bell, path: '/admin/notifications' },
+    { name: 'Users', icon: Users, count: users.length, path: '/AdminEntity?entity=User' },
+    { name: 'Jobs', icon: Briefcase, count: jobs.length, path: '/AdminEntity?entity=Job' },
+    { name: 'Companies', icon: Building2, count: companies.length, path: '/AdminEntity?entity=Company' },
+    { name: 'Applications', icon: FileText, count: applications.length, path: '/AdminEntity?entity=Application' },
+    { name: 'Messages', icon: MessageSquare, path: '/AdminEntity?entity=Message' },
+    { name: 'Cities', icon: MapPin, path: '/AdminEntity?entity=City' },
+    { name: 'Countries', icon: MapPin, path: '/AdminEntity?entity=Country' },
+    { name: 'Reports', icon: Bell, path: '/AdminReports' },
   ];
 
   return (
